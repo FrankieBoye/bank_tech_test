@@ -20,3 +20,17 @@ date || credit || debit || balance<br>
 14/01/2012 || || 500.00 || 2500.00<br>
 13/01/2012 || 2000.00 || || 3000.00<br>
 10/01/2012 || 1000.00 || || 1000.00
+
+### User stories
+
+As a client<br>
+So that I can store my money safely<br>
+I want to be able to deposit it in my account
+
+As a client<br>
+So that I can access my money<br>
+I want to be able to withdraw my money
+
+As a client<br>
+So that I can keep track of my money<br>
+I want to be able to print a statement which lists my account history
