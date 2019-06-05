@@ -1,3 +1,6 @@
+# frozen_string_literal: true
+
+# main class
 class Account
   attr_reader :balance
 
@@ -5,4 +8,7 @@ class Account
     @balance = 0
   end
 
+  def credit(credit_amount)
+    @balance += credit_amount
+  end
 end
