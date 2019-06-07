@@ -1,10 +1,14 @@
 # frozen_string_literal: true
 
-# transactions class
-class Transactions
+# history class
+class History
   attr_reader :history
 
   def initialize
     @history = []
+  end
+
+  def update(transaction)
+    @history << transaction
   end
 end
