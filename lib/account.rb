@@ -23,4 +23,10 @@ class Account
     @transaction_history << transaction
   end
 
+  def print
+      puts 'date || credit || debit || balance'
+      @transaction_history.each do |account|
+      puts "#{account.date} || #{account.credit} || #{account.debit} || #{account.balance}"
+    end
+  end
 end
