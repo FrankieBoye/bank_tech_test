@@ -1,3 +1,6 @@
+# frozen_string_literal: true
+
+# transaction class
 class Transaction
   attr_reader :date, :credit, :debit, :balance
 

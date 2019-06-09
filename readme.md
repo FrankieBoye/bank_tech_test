@@ -34,3 +34,28 @@ I want to be able to withdraw my money
 As a client<br>
 So that I can keep track of my money<br>
 I want to be able to print a statement which lists my account history
+<br>
+<br>
+
+##### Using this application:
+<br>
+This application can be run through IRB.
+
+$ irb
+
+require './lib/account'
+
+account = Account.new
+
+##### An example of app in use below:
+<br>
+account.credit 1000<br>
+account.debit 200<br>
+account.credit 400<br>
+account.credit 400<br>
+account.credit 400<br>
+account.debit 50
+
+account.print
+
+<img src="screenshots/screenshot.png"/>

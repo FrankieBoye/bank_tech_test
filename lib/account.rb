@@ -24,9 +24,9 @@ class Account
   end
 
   def print
-      puts 'date || credit || debit || balance'
-      @transaction_history.each do |account|
-      puts "#{account.date} || #{account.credit} || #{account.debit} || #{account.balance}"
+    puts 'date || credit || debit || balance'
+    @transaction_history.reverse_each do |a|
+      puts "#{a.date} || #{a.credit} || #{a.debit} || #{a.balance}"
     end
   end
 end
