@@ -1,23 +1,26 @@
 # frozen_string_literal: true
 
-require_relative 'History'
+require_relative 'Transaction'
 # main class
 class Account
   attr_reader :balance, :history, :date
 
-  def initialize(history = History.new)
+  def initialize
     @balance = 0
     @date = Time.now.strftime('%d/%m/%y')
-    @history = history
+    @transaction_history = []
   end
 
-  def credit(credit_amount)
-    @balance += credit_amount
-    @history.update("#{@date} || #{credit_amount} || || #{@balance}")
+  def credit(credit)
+    @balance += credit
+    transaction = Transaction.new(date, credit, 0, balance)
+    @transaction_history << transaction
   end
 
-  def debit(debit_amount)
-    @balance -= debit_amount
-    @history.update("#{@date} || || #{debit_amount} || #{@balance}")
+  def debit(debit)
+    @balance -= debit
+    transaction = Transaction.new(date, 0, debit, balance)
+    @transaction_history << transaction
   end
+
 end
