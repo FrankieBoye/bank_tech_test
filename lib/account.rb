@@ -1,9 +1,10 @@
 # frozen_string_literal: true
 
 require_relative 'Transaction'
+require_relative 'Print'
 # main class
 class Account
-  attr_reader :balance, :history, :date
+  attr_reader :balance, :date
 
   def initialize
     @balance = 0
@@ -23,10 +24,7 @@ class Account
     @transaction_history << transaction
   end
 
-  def print
-    puts 'date || credit || debit || balance'
-    @transaction_history.reverse_each do |a|
-      puts "#{a.date} || #{a.credit} || #{a.debit} || #{a.balance}"
+  def print(statement = Print)
+    statement.new(@transaction_history).print_statement
     end
   end
-end
