@@ -8,7 +8,6 @@ class Account
 
   def initialize
     @balance = 0
-    @date = Time.now.strftime('%d/%m/%y')
     @transaction_history = []
   end
 
@@ -26,5 +25,5 @@ class Account
 
   def print(statement = Print)
     statement.new(@transaction_history).print_statement
-    end
   end
+end
